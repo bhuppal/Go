@@ -1,7 +1,9 @@
+
 package main
 
 import "fmt"
 
+/*
 func main() {
 	color1, color2, color3 := colors()
 
@@ -10,7 +12,7 @@ func main() {
 	c := color("Red")
 	fmt.Println(c.describe("is an awesome color"))
 }
-
+*/
 func colors() (string, string, string) {
 	return "red", "yellow", "blue"
 }
