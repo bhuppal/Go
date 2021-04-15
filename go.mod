@@ -1,3 +1,3 @@
-module example.com/main
+module GoApp
 
 go 1.16

@@ -16,8 +16,8 @@ type deck []string
 
 func newDeck() deck {
 	cards := deck{}
-	cardSuits := deck{"Spades", "Hearts", "Diamonds"}
-	cardValues := deck{"Aces", "Two", "Three"}
+	cardSuits := deck{"Spades", "Hearts", "Diamonds", "Clubs"}
+	cardValues := deck{"Aces", "Two", "Three", "Four"}
 	for _, suits := range cardSuits {
 		for _, values := range cardValues {
 			cards = append(cards, values+" of "+suits)
