@@ -1,0 +1,8 @@
+ # exclude everything except directory src
+bin/
+pkg/
+src/external/
+
+# Ignore executable files
+*.exe
+ 
