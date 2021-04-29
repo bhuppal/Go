@@ -7,6 +7,8 @@ src/external/
 /pkg
 /src/external
 
+**/external
+
 # Ignore executable files
 *.exe
  
