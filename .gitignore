@@ -2,6 +2,8 @@
 bin/
 pkg/
 src/external/
+src/external/**
+
 
 # Ignore executable files
 *.exe
