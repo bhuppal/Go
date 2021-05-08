@@ -1,4 +1,3 @@
-
 package main
 
 import "fmt"
@@ -23,13 +22,11 @@ func main() {
 	limit := 10
 	result := 20 //addNums(10, 20)
 	sum := result
-	if  result <= limit {
+	if result <= limit {
 		fmt.Println(sum)
 	} else {
 		fmt.Println(limit)
 	}
-//	result := addNums(10, 20)
+	//	result := addNums(10, 20)
 	fmt.Println(result)
 }
-
-

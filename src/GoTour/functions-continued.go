@@ -7,5 +7,5 @@ func multiply(x, y int) int {
 }
 
 func main() {
-	fmt.Printf("The product of 2 numbers: %d", multiply(5,5))
+	fmt.Printf("The product of 2 numbers: %d", multiply(5, 5))
 }

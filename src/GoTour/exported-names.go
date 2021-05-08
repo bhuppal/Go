@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("Math Pi value is %g",math.Pi)
+	fmt.Printf("Math Pi value is %g", math.Pi)
 }
