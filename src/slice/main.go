@@ -165,27 +165,33 @@ func main() {
 	// Passing the 24 byres between functions is fast and easy
 	sliceFun = foo(sliceFun)
 
+	// A SLICE allows to group together values of the same type
+	mySlice := [] int{4, 5, 6, 7, 10}
+	fmt.Println(mySlice)
+
+	//Iterating through Slice
+	mySliceLoop := []string{"Apple", "Orange", "Grapes", "Banana"}
+	for i, v := range mySliceLoop {
+		fmt.Println(i,v)
+	}
+
+	fmt.Println(mySliceLoop[1:3])
+
+	//append a slice
+	mySliceAppend := []int{9, 8, 7}
+	fmt.Println(mySliceAppend)
+
+	mySliceNewAppend := append(mySliceAppend, 89, 123, 234, 53 )
+	fmt.Println(mySliceNewAppend)
+
+	mySliceAppendAppend := append(mySliceAppend, mySliceNewAppend...)
+	fmt.Println(mySliceAppendAppend)
+
+	// Delete - Slice
+	myS1 := append()
 }
 
 func foo(slice []int) []int {
 	fmt.Println("Slice - func foo")
 	return slice
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
