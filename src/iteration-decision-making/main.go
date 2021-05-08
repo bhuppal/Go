@@ -21,7 +21,7 @@ func main() {
 	// one assignment and one condition
 
 	limit := 10
-	result := addNums(10, 20)
+	result := 20 //addNums(10, 20)
 	sum := result
 	if  result <= limit {
 		fmt.Println(sum)
