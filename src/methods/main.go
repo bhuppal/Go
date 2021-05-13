@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type user struct {
-	name string
+	name  string
 	email string
 }
 
@@ -29,27 +29,25 @@ func (u *user) changeEmail(newEmail string) {
 	u.email = newEmail
 }
 
-
 func main() {
-	person1 := &user{name: "Bhuppal", email:"bhuppal@gmail.com"}
+	person1 := &user{name: "Bhuppal", email: "bhuppal@gmail.com"}
 
-	fmt.Printf("Memory address of Person1 %v\n",&person1);
-	person2 := &person1 //assigning memory address of person1 to person2
+	fmt.Printf("Memory address of Person1 %v\n", &person1)
+	person2 := &person1                                   //assigning memory address of person1 to person2
 	fmt.Printf("Memory address of Person2 %v\n", person2) // both person1 and person2 are pointing to same memory address location
 
-	fmt.Printf("Person2 values are %s %s\n",(*person2).name, (*person2).email)
+	fmt.Printf("Person2 values are %s %s\n", (*person2).name, (*person2).email)
 
-	person1.name = "Rhonda"
-	fmt.Printf("Name change %s\n",(*person2).name)
+	(*person1).name = "Rhonda"
+	fmt.Printf("Name change %s\n", (*person2).name)
 
 	(*person2).name = "Kumar"
-	fmt.Printf("Name change %s\n",(*person1).name)
-
+	fmt.Printf("Name change %s\n", (*person1).name)
 
 	// Values of type user can be used to call methods
 	// declared with a value of receiver.
 	bill := user{"Bill", "bill@gmail.com"}
-	bill.notify("Temp")
+	(&bill).notify("Temp")
 
 	fmt.Println("Sending User Email To %s<%s>",
 		bill.name,
@@ -67,7 +65,7 @@ func main() {
 	// Values of type user can be used to call methods
 	// declared with a pointer of receiver
 	bill.changeEmail("newEmail@email.com")
-	bill.notify("Temp")
+	(&bill).notify("Temp")
 
 	fmt.Println("Sending User Email To %s<%s>",
 		bill.name,
