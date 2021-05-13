@@ -12,6 +12,5 @@ func main() {
 	fmt.Println("Hello world!!!")
 	fmt.Println(runtime.NumCPU())
 }
+
 // The main function is what gets executed when you run your application - just like in C
-
-

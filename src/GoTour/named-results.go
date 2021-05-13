@@ -11,5 +11,5 @@ func split(sum int) (x, y int) {
 
 func main() {
 	a, b := split(45)
-	fmt.Println(a,b)
+	fmt.Println(a, b)
 }

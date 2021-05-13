@@ -8,7 +8,7 @@ type Vertex struct {
 }
 
 func main() {
-	v := Vertex{X:1,Y:2}
+	v := Vertex{X: 1, Y: 2}
 
 	p := &v
 	p.X = 1e9

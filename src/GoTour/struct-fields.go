@@ -8,6 +8,6 @@ type Vertex struct {
 }
 
 func main() {
-	v := Vertex{X: 320, Y:872}
-	fmt.Println(v.X,v.Y)
+	v := Vertex{X: 320, Y: 872}
+	fmt.Println(v.X, v.Y)
 }

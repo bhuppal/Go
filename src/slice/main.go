@@ -16,8 +16,8 @@ func main() {
 	// Create a slice of strings
 	// If we specify value inside [], then its array otherwise slice
 	// Contains a length and capacity of 5 elements
-	slice := make([]string, 3,5)
-	slice[1] ="Bhuppal"
+	slice := make([]string, 3, 5)
+	slice[1] = "Bhuppal"
 	fmt.Printf("The length of the slice is %d\n", len(slice))
 	fmt.Printf("The capacity of the slice is %d\n", cap(slice))
 
@@ -38,7 +38,7 @@ func main() {
 	//Declaring a slice with index positions
 	// Create a slice of strings
 	// Initialize the 100th element with an empty string
-	slice3 := []string{99:"bhuppal"}
+	slice3 := []string{99: "bhuppal"}
 	fmt.Println(slice3[99])
 
 	var slicenothing []int
@@ -66,10 +66,10 @@ func main() {
 
 	//Using append to add an element to a slice
 	newSlice = append(newSlice, 60)
-//	newSlice = append(newSlice, 100)
-//	newSlice = append(newSlice, 200)
-//	newSlice = append(newSlice, 300)
-//	newSlice = append(newSlice, 400)
+	//	newSlice = append(newSlice, 100)
+	//	newSlice = append(newSlice, 200)
+	//	newSlice = append(newSlice, 300)
+	//	newSlice = append(newSlice, 400)
 	fmt.Println(cap(newSlice))
 	fmt.Println(newSlice, cap(newSlice))
 	fmt.Println(sliceexample)
@@ -85,7 +85,6 @@ func main() {
 	//newSlice[9] = 900
 	fmt.Println(newSlice)
 	fmt.Println(sliceexample)
-
 
 	// Create a slice of integers
 	// Contains a length and capacity of 4 elements
@@ -103,7 +102,7 @@ func main() {
 	source := []string{"Apple", "Orange", "Plum", "Grapes", "Banana"}
 	fmt.Println(source, cap(source), len(source))
 
-	newSliceSource := source[0:len(source) -2:len(source)]
+	newSliceSource := source[0 : len(source)-2 : len(source)]
 	// For slice[i:j:k] or [2:3:4]
 	// Length: j - i or 3 - 2 = 1
 	// Capacity: K - i or 4 - 2 = 2
@@ -120,11 +119,10 @@ func main() {
 	//newSourceBenefit = append(newSourceBenefit, "Kiwi")
 	fmt.Println(sourceBenefit, len(sourceBenefit), cap(sourceBenefit))
 	fmt.Println(newSourceBenefit, len(newSourceBenefit), cap(newSourceBenefit))
-    newSourceBenefit[0] = "Cat"
-    //newSourceBenefit[1] = "Dog"
+	newSourceBenefit[0] = "Cat"
+	//newSourceBenefit[1] = "Dog"
 	fmt.Println(sourceBenefit, len(sourceBenefit), cap(sourceBenefit))
 	fmt.Println(newSourceBenefit, len(newSourceBenefit), cap(newSourceBenefit))
-
 
 	// Appending to a slice from another slice
 	s1 := []int{1, 2, 3, 4}
@@ -134,8 +132,8 @@ func main() {
 	// Iterating over Slice
 	sliceLoop := []string{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
 
-	for index, monthName := range sliceLoop{
-		fmt.Printf("Month name is %v and number is %d\n",monthName, index+1)
+	for index, monthName := range sliceLoop {
+		fmt.Printf("Month name is %v and number is %d\n", monthName, index+1)
 	}
 
 	// Declaring a multidimensioanl slice
@@ -165,27 +163,33 @@ func main() {
 	// Passing the 24 byres between functions is fast and easy
 	sliceFun = foo(sliceFun)
 
+	// A SLICE allows to group together values of the same type
+	mySlice := []int{4, 5, 6, 7, 10}
+	fmt.Println(mySlice)
+
+	//Iterating through Slice
+	mySliceLoop := []string{"Apple", "Orange", "Grapes", "Banana"}
+	for i, v := range mySliceLoop {
+		fmt.Println(i, v)
+	}
+
+	fmt.Println(mySliceLoop[1:3])
+
+	//append a slice
+	mySliceAppend := []int{9, 8, 7}
+	fmt.Println(mySliceAppend)
+
+	mySliceNewAppend := append(mySliceAppend, 89, 123, 234, 53)
+	fmt.Println(mySliceNewAppend)
+
+	mySliceAppendAppend := append(mySliceAppend, mySliceNewAppend...)
+	fmt.Println(mySliceAppendAppend)
+
+	// Delete - Slice
+	myS1 := append()
 }
 
 func foo(slice []int) []int {
 	fmt.Println("Slice - func foo")
 	return slice
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
